@@ -3,6 +3,59 @@
   "build": {
     "dockerfile": "../Dockerfile"
   },
+
+  "mounts": [
+    {
+      "type": "volume",
+      "source": "app",
+      "target": "${containerWorkspaceFolder}/app"
+    },
+    {
+      "type": "volume",
+      "source": "public",
+      "target": "${containerWorkspaceFolder}/public"
+    },
+    {
+      "type": "volume",
+      "source": ".eslintrc.json",
+      "target": "${containerWorkspaceFolder}/.eslintrc.json"
+    },
+    {
+      "type": "volume",
+      "source": "node_module",
+      "target": "${containerWorkspaceFolder}/node_module"
+    },
+    {
+      "type": "volume",
+      "source": "next-env.d.ts",
+      "target": "${containerWorkspaceFolder}/next-env.d.ts"
+    },
+    {
+      "type": "volume",
+      "source": "next.config.js",
+      "target": "${containerWorkspaceFolder}/next.config.js"
+    },
+    {
+      "type": "volume",
+      "source": "package-lock.json",
+      "target": "${containerWorkspaceFolder}/package-lock.json"
+    },
+    {
+      "type": "volume",
+      "source": "package.json",
+      "target": "${containerWorkspaceFolder}/package.json"
+    },
+    {
+      "type": "volume",
+      "source": "tsconfig.json",
+      "target": "${containerWorkspaceFolder}/tsconfig.json"
+    },
+    {
+      "type": "volume",
+      "source": "src-tauri",
+      "target": "${containerWorkspaceFolder}/src-tauri"
+    }
+  ],
   "init": true,
   "features": {
     "ghcr.io/devcontainers/features/desktop-lite:1": {
